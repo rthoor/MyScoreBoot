@@ -1,0 +1,49 @@
+### Регистрация (Не забудьте подтвердить аккаунт по почте)
+
+POST localhost:8080/register
+Content-Type: application/json
+
+{
+  "email": "rthoor@mail.ru",
+  "password": "12345"
+}
+
+### Логин и получение токена
+POST localhost:8080/login
+Content-Type: application/json
+
+{
+  "email": "rthoor@mail.ru",
+  "password": "12345"
+}
+
+### Выход из системы
+GET localhost:8080/logout
+Content-Type: application/json
+Authorization: Bearer
+
+### Получен токен:
+
+### Добавление страны
+POST localhost:8080/countries
+Content-Type: application/json
+Authorization: Bearer
+
+{
+  "name": "Словакия"
+}
+
+### Получение всех матчей на день
+GET localhost:8080/matches/01-01-2022
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6IlVTRVIiLCJqd3RDcmVhdGVkRGF0ZSI6IjIwMjItMDYtMDYgMDE6Mzc6MjcuOTA5Iiwic3RhdGUiOiJDT05GSVJNRUQiLCJlbWFpbCI6InJ0aG9vckBtYWlsLnJ1In0.ufxiAtX5stVcNZ8sXlyijYWuPHKhnSidaM9uflmQqYE
+
+### Получение всех матчей команды
+GET localhost:8080/teams/2/matches
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6IlVTRVIiLCJqd3RDcmVhdGVkRGF0ZSI6IjIwMjItMDYtMDYgMDE6Mzc6MjcuOTA5Iiwic3RhdGUiOiJDT05GSVJNRUQiLCJlbWFpbCI6InJ0aG9vckBtYWlsLnJ1In0.ufxiAtX5stVcNZ8sXlyijYWuPHKhnSidaM9uflmQqYE
+
+### Поиск игрока по имени
+GET localhost:8080/players?name=c
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6IlVTRVIiLCJqd3RDcmVhdGVkRGF0ZSI6IjIwMjItMDYtMDYgMDE6Mzc6MjcuOTA5Iiwic3RhdGUiOiJDT05GSVJNRUQiLCJlbWFpbCI6InJ0aG9vckBtYWlsLnJ1In0.ufxiAtX5stVcNZ8sXlyijYWuPHKhnSidaM9uflmQqYE
